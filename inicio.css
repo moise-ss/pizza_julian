@@ -24,3 +24,16 @@ body {
 .banner:hover img {
   transform: scale(1.08);
 }
+
+/* Justificar texto en acordeones y collapse */
+.accordion-body,
+.collapse .card-body {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Centrar las tarjetas dentro de los collapse */
+.collapse .card-body {
+  margin: 0 auto;
+  display: block;
+}
