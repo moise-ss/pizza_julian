@@ -1,0 +1,388 @@
+/* ==========================================================================
+   VARIABLES DE COLOR (Identidad Visual Pizza Julian)
+   ========================================================================== */
+:root {
+  --brand-red: #e11d1a;       /* El rojo vivo del botón ¡ORDENA AHORA! y del logo */
+  --bg-light: #f7f7f7;        /* El fondo claro y limpio del banner principal */
+  --text-dark: #1a1a1a;       /* El negro elegante de "PIZZA" y textos principales */
+  --text-muted: #666666;      /* Gris para descripciones o textos secundarios */
+  --border: rgba(0, 0, 0, 0.1); /* Bordes sutiles para elementos claros */
+  
+  /* Tonos para el Footer (Inspirados en la mesa de piedra negra) */
+  --bg-footer-dark: #181818;  /* El carbón profundo del fondo texturizado */
+  --text-footer-light: #f4efde; /* Crema suave para textos sobre fondo oscuro */
+}
+
+/* ==========================================================================
+   ESTILOS GENERALES Y ESTRUCTURA
+   ========================================================================== */
+body {
+  margin: 0;
+  min-height: 100vh;
+  /* Degradado suave usando el rojo de la marca sobre el fondo claro */
+  background: radial-gradient(circle at top left, rgba(225, 29, 26, 0.05), transparent 30%), var(--bg-light);
+  color: var(--text-dark);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.container.text-center,
+.container-fluid.text-center {
+  background: transparent;
+}
+
+.card.h-100 {
+  height: 100%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.card-title,
+.card-text,
+.card-body .btn {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-body .btn {
+  display: inline-block;
+  width: fit-content;
+}
+
+/* ==========================================================================
+   BARRA DE NAVEGACIÓN (NAVBAR)
+   ========================================================================== */
+.navbar,
+.navbar-expand-lg.bg-body-tertiary {
+  /* Fondo blanco crema semi-transparente */
+  background: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(10px); /* Efecto de cristal esmerilado */
+  border-bottom: 2px solid rgba(225, 29, 26, 0.15); /* Línea inferior roja muy sutil */
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  padding: 12px 0;
+  transition: all 0.3s ease;
+}
+
+/* Marca o Logotipo */
+.navbar .navbar-brand {
+  color: var(--text-dark) !important;
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Destacar texto del logo en rojo */
+.navbar .navbar-brand span {
+  color: var(--brand-red);
+}
+
+/* Enlaces de la Navbar */
+.navbar .nav-link {
+  color: var(--text-dark) !important;
+  font-weight: 500;
+  padding: 6px 14px !important;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+}
+
+/* Hover de los enlaces */
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: var(--brand-red) !important;
+  background: rgba(225, 29, 26, 0.05);
+}
+
+/* Enlace activo (Página actual) */
+.navbar .nav-link.active {
+  color: #ffffff !important;
+  background: var(--brand-red) !important;
+  font-weight: 600;
+}
+
+/* Menú Desplegable (Dropdown) */
+.navbar .dropdown-menu {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.navbar .dropdown-item {
+  color: var(--text-dark) !important;
+  padding: 8px 20px;
+  transition: background 0.2s ease;
+}
+
+.navbar .dropdown-item:hover {
+  background: rgba(225, 29, 26, 0.06);
+  color: var(--brand-red) !important;
+}
+
+/* Buscador en la Navbar */
+.navbar .form-control {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: var(--text-dark);
+  border-radius: 8px;
+  padding: 6px 12px;
+  transition: all 0.25s ease;
+}
+
+.navbar .form-control:focus {
+  background: #ffffff;
+  border-color: var(--brand-red);
+  box-shadow: 0 0 0 3px rgba(225, 29, 26, 0.15);
+  outline: none;
+}
+
+/* Botón de búsqueda (Outline Rojo) */
+.navbar .btn-outline-success {
+  color: var(--brand-red) !important;
+  border-color: var(--brand-red) !important;
+  background: transparent;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.navbar .btn-outline-success:hover {
+  background: var(--brand-red) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(225, 29, 26, 0.2);
+}
+
+/* Menú Hamburguesa Móvil */
+.navbar .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0.1);
+  padding: 6px 10px;
+}
+
+.navbar .navbar-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(225, 29, 26, 0.15);
+}
+
+.navbar .navbar-toggler-icon {
+  filter: contrast(0.1); /* Hace que el icono se adapte al fondo claro */
+}
+
+/* ==========================================================================
+   COMPONENTES PRINCIPALES (Banners y Botones)
+   ========================================================================== */
+.banner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-height: 420px;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.06);
+  background: #ffffff;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  min-height: 320px;
+  transition: transform 0.6s ease;
+}
+
+.banner:hover img {
+  transform: scale(1.05);
+}
+
+/* Botón Principal (Estilo ¡ORDENA AHORA!) */
+.btn-primary {
+  background: var(--brand-red);
+  border-color: var(--brand-red);
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(225, 29, 26, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: #b81412;
+  border-color: #b81412;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(225, 29, 26, 0.3);
+}
+
+/* ==========================================================================
+   CONTENIDO DESPLEGABLE (Acordeones y Collapses)
+   ========================================================================== */
+.accordion .accordion-item {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.accordion-button {
+  background: #ffffff;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.accordion-button:not(.collapsed) {
+  background: rgba(225, 29, 26, 0.05);
+  color: var(--brand-red);
+}
+
+.accordion-button::after {
+  filter: none; /* Icono oscuro para legibilidad sobre blanco */
+}
+
+.accordion-body,
+.collapse .card-body {
+  text-align: justify;
+  text-justify: inter-word;
+  color: var(--text-dark);
+}
+
+.collapse .card-body {
+  margin: 0 auto;
+  display: block;
+  background: #ffffff;
+  border: 1px solid var(--border);
+}
+
+.card.card-body {
+  background: #ffffff;
+  color: var(--text-dark);
+  border: 1px solid var(--border);
+}
+
+/* ==========================================================================
+   SECCIÓN FINAL (Footer y Textura de Piedra Oscura)
+   ========================================================================== */
+.footer-banner {
+  position: relative;
+  overflow: hidden;
+  max-height: 180px;
+  background-color: var(--bg-footer-dark);
+}
+
+.footer-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  min-height: 120px;
+  opacity: 0.85; /* Se integra con el fondo oscuro */
+}
+
+.footer-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 8px;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.6); /* Contraste para leer sobre los ingredientes sueltos */
+  padding: 8px 12px;
+  font-size: 0.95rem;
+}
+
+.site-footer {
+  /* Fondo oscuro mineral que emula la mesa de piedra negra */
+  background: linear-gradient(180deg, #1f1f1f, var(--bg-footer-dark));
+  color: var(--text-footer-light);
+  padding: 40px 0 20px;
+  font-family: inherit;
+  border-top: 4px solid var(--brand-red); /* Detalle de marca superior */
+}
+
+.site-footer h5 {
+  margin-bottom: 0.75rem;
+  position: relative;
+  padding-bottom: 8px;
+  color: #ffffff;
+}
+
+.site-footer h5::after {
+  content: "";
+  width: 36px;
+  height: 3px;
+  background: var(--brand-red);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  padding: 6px 0;
+  color: #c2c9d0;
+  opacity: 0.95;
+}
+
+.socials {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.social {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--brand-red);
+  color: #ffffff;
+  font-weight: 700;
+  transition: transform 0.2s ease;
+}
+
+.social:hover {
+  transform: scale(1.1);
+  color: #ffffff;
+}
+
+.footer-sep {
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 20px 0;
+}
+
+.site-footer p.small {
+  opacity: 0.8;
+  margin: 0;
+  padding: 8px 0 18px;
+  color: #c2c9d0;
+}
+
+/* Media Queries Responsivas */
+@media (max-width: 767px) {
+  .site-footer {
+    padding: 24px 0;
+  }
+  .site-footer h5::after {
+    left: 0;
+  }
+}
