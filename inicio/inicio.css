@@ -43,32 +43,26 @@ html {
    ========================================================================== */
 .navbar,
 .navbar-expand-lg.bg-body-tertiary {
-  /* Fondo blanco crema semi-transparente */
-  background: rgba(255, 255, 255, 0.94) !important;
-  backdrop-filter: blur(10px); /* Efecto de cristal esmerilado */
-  border-bottom: 2px solid rgba(225, 29, 26, 0.15); /* Línea inferior roja muy sutil */
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  background: linear-gradient(180deg, #1f1f1f, var(--bg-footer-dark)) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 4px solid var(--brand-red);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
   padding: 12px 0;
   transition: all 0.3s ease;
 }
 
 /* Marca o Logotipo */
 .navbar .navbar-brand {
-  color: var(--text-dark) !important;
+  color: #ffffff !important;
   font-weight: 700;
   font-size: 1.35rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
-/* Destacar texto del logo en rojo */
-.navbar .navbar-brand span {
-  color: var(--brand-red);
-}
-
 /* Enlaces de la Navbar */
 .navbar .nav-link {
-  color: var(--text-dark) !important;
+  color: var(--text-footer-light) !important;
   font-weight: 500;
   padding: 6px 14px !important;
   border-radius: 6px;
@@ -78,8 +72,8 @@ html {
 /* Hover de los enlaces */
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
-  color: var(--brand-red) !important;
-  background: rgba(225, 29, 26, 0.05);
+  color: #ffffff !important;
+  background: rgba(225, 29, 26, 0.18);
 }
 
 /* Enlace activo (Página actual) */
@@ -126,25 +120,25 @@ html {
   outline: none;
 }
 
-/* Botón de búsqueda (Outline Rojo) */
+/* Botón de navegación */
 .navbar .btn-outline-success {
-  color: var(--brand-red) !important;
+  color: #ffffff !important;
   border-color: var(--brand-red) !important;
-  background: transparent;
+  background: var(--brand-red);
   font-weight: 600;
   border-radius: 8px;
   transition: all 0.25s ease;
 }
 
 .navbar .btn-outline-success:hover {
-  background: var(--brand-red) !important;
-  color: #ffffff !important;
+  background: #ffffff !important;
+  color: var(--brand-red) !important;
   box-shadow: 0 4px 12px rgba(225, 29, 26, 0.2);
 }
 
 /* Menú Hamburguesa Móvil */
 .navbar .navbar-toggler {
-  border-color: rgba(0, 0, 0, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
   padding: 6px 10px;
 }
 
@@ -153,7 +147,7 @@ html {
 }
 
 .navbar .navbar-toggler-icon {
-  filter: contrast(0.1); /* Hace que el icono se adapte al fondo claro */
+  filter: brightness(0) invert(1);
 }
 
 /* ==========================================================================
@@ -206,46 +200,48 @@ html {
    CONTENIDO DESPLEGABLE (Acordeones y Collapses)
    ========================================================================== */
 .accordion .accordion-item {
-  background: #ffffff;
-  border: 1px solid var(--border);
+  background: linear-gradient(180deg, #1b1b1b, #0f0f0f);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 14px;
   margin-bottom: 16px;
   overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
 }
 
 .accordion-button {
-  background: #ffffff;
-  color: var(--text-dark);
+  background: transparent;
+  color: #ffffff;
   font-weight: 600;
 }
 
 .accordion-button:not(.collapsed) {
-  background: rgba(225, 29, 26, 0.05);
-  color: var(--brand-red);
+  background: rgba(225, 29, 26, 0.18);
+  color: #ffffff;
 }
 
 .accordion-button::after {
-  filter: none; /* Icono oscuro para legibilidad sobre blanco */
+  filter: brightness(0) invert(1);
 }
 
 .accordion-body,
 .collapse .card-body {
   text-align: justify;
   text-justify: inter-word;
-  color: var(--text-dark);
+  color: var(--text-footer-light);
 }
 
 .collapse .card-body {
   margin: 0 auto;
   display: block;
-  background: #ffffff;
-  border: 1px solid var(--border);
+  background: linear-gradient(180deg, #1b1b1b, #0f0f0f);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-footer-light);
 }
 
 .card.card-body {
-  background: #ffffff;
-  color: var(--text-dark);
-  border: 1px solid var(--border);
+  background: linear-gradient(180deg, #1b1b1b, #0f0f0f);
+  color: var(--text-footer-light);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* ==========================================================================

@@ -22,7 +22,7 @@
     <!--Seccion Nav-->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Pizza Julián</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -34,22 +34,39 @@
         <li class="nav-item">
           <a class="nav-link" href="../productos/productos.html">Productos</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link" href="../contactos/contactos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Contacto
-          </a>
-        </li>
         <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          <a class="nav-link" href="../contactos/contactos.html">Contacto</a>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#loginModal" style="border-color:#b71c1c;color:#fff;background:#111;">Iniciar Sesión</button>
     </div>
   </div>
 </nav>
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="background:#111; border:1px solid #b71c1c; color:#fff;">
+      <div class="modal-header" style="border-bottom:1px solid rgba(255,255,255,0.12);">
+        <h5 class="modal-title" id="loginModalLabel">Iniciar sesión</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="usuarioLogin" class="form-label">Usuario</label>
+          <input type="text" class="form-control" id="usuarioLogin" placeholder="Ingrese su usuario">
+        </div>
+        <div class="mb-3">
+          <label for="passwordLogin" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="passwordLogin" placeholder="Ingrese su contraseña">
+        </div>
+      </div>
+      <div class="modal-footer" style="border-top:1px solid rgba(255,255,255,0.12);">
+        <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn" style="background:#b71c1c;color:#fff;">Entrar</button>
+      </div>
+    </div>
+  </div>
+</div>
 <!--Fin Seccion Nav-->
 
 <!--Seccion Carrusel y Video Youtube-->
@@ -95,36 +112,36 @@
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Elemento de acordeón #1
+        Pizza Mexicana
       </button>
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>Este es el cuerpo del acordeón del primer elemento.</strong> Se muestra por defecto, hasta que el plugin de colapso añade las clases apropiadas que utilizamos para dar estilo a cada elemento. Estas clases controlan la apariencia general, así como el mostrar y ocultar mediante transiciones CSS. Puedes modificar cualquier parte de esto con CSS personalizado o anulando nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+        <strong>Pizza Mexicana.</strong> Una combinación perfecta de salsa de tomate, queso mozzarella, chorizo, maíz, jalapeños y cebolla, con ese toque picante que la hace irresistible.
       </div>
     </div>
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Elemento de acordeón #2
+        Pizza Napolitana
       </button>
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>Este es el cuerpo del acordeón del segundo elemento.</strong> Está oculto por defecto, hasta que el plugin de colapso añade las clases apropiadas que utilizamos para dar estilo a cada elemento. Estas clases controlan la apariencia general, así como el mostrar y ocultar mediante transiciones CSS. Puedes modificar cualquier parte de esto con CSS personalizado o anulando nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+        <strong>Pizza Napolitana.</strong> Clásica y tradicional, preparada con tomate fresco, ajo, albahaca y queso mozzarella, con una base ligera y una masa esponjosa.
       </div>
     </div>
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Elemento de acordeón #3
+        Pizza Hawaiana
       </button>
     </h2>
     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>Este es el cuerpo del acordeón del tercer elemento.</strong> Está oculto por defecto, hasta que el plugin de colapso añade las clases apropiadas que utilizamos para dar estilo a cada elemento. Estas clases controlan la apariencia general, así como el mostrar y ocultar mediante transiciones CSS. Puedes modificar cualquier parte de esto con CSS personalizado o anulando nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+        <strong>Pizza Hawaiana.</strong> Una mezcla dulce y salada con queso mozzarella, jamón y piña, ideal para quienes buscan un sabor familiar y muy sabroso.
       </div>
     </div>
   </div>
@@ -133,48 +150,48 @@
 <br>
 <!--insertar collapse-->
 <div class="container text-center">
-  <div class="row">
-    <div class="col">
+  <div class="row g-3">
+    <div class="col-12 col-md-4">
       <p>
-  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-    Tecnico
-  </button>
-</p>
-<div style="min-height: 120px;">
-  <div class="collapse collapse-horizontal" id="collapseWidthExample">
-    <div class="card card-body" style="width: 300px;">
-      This is some placeholder content for a horizontal collapse. It’s hidden by default and shown when triggered.
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHistoria" aria-expanded="false" aria-controls="collapseHistoria">
+          Nuestra Historia
+        </button>
+      </p>
+      <div style="min-height: 120px;">
+        <div class="collapse collapse-horizontal" id="collapseHistoria">
+          <div class="card card-body" style="width: 300px;">
+            Pizza Julián nació para llevar una experiencia auténtica de sabor, tradición y atención cercana a cada cliente.
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-    </div>
-    <div class="col order-5">
+    <div class="col-12 col-md-4">
       <p>
-  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-    Superior
-  </button>
-</p>
-<div style="min-height: 120px;">
-  <div class="collapse collapse-horizontal" id="collapseWidthExample">
-    <div class="card card-body" style="width: 300px;">
-      This is some placeholder content for a horizontal collapse. It’s hidden by default and shown when triggered.
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMision" aria-expanded="false" aria-controls="collapseMision">
+          Nuestra Misión
+        </button>
+      </p>
+      <div style="min-height: 120px;">
+        <div class="collapse collapse-horizontal" id="collapseMision">
+          <div class="card card-body" style="width: 300px;">
+            Ofrecer pizzas artesanales, de calidad y con ingredientes frescos, para crear momentos deliciosos en cada mesa.
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-    </div>
-    <div class="col order-1">
+    <div class="col-12 col-md-4">
       <p>
-  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-    Delfin
-  </button>
-</p>
-<div style="min-height: 120px;">
-  <div class="collapse collapse-horizontal" id="collapseWidthExample">
-    <div class="card card-body" style="width: 300px;">
-      This is some placeholder content for a horizontal collapse. It’s hidden by default and shown when triggered.
-    </div>
-  </div>
-</div>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVision" aria-expanded="false" aria-controls="collapseVision">
+          Nuestra Visión
+        </button>
+      </p>
+      <div style="min-height: 120px;">
+        <div class="collapse collapse-horizontal" id="collapseVision">
+          <div class="card card-body" style="width: 300px;">
+            Ser la pizzería favorita de la comunidad, reconocida por su sabor, servicio y pasión por la pizza.
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

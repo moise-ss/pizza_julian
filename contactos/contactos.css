@@ -66,32 +66,26 @@ html {
    ========================================================================== */
 .navbar,
 .navbar-expand-lg.bg-body-tertiary {
-  /* Fondo blanco crema semi-transparente */
-  background: rgba(255, 255, 255, 0.94) !important;
-  backdrop-filter: blur(10px); /* Efecto de cristal esmerilado */
-  border-bottom: 2px solid rgba(225, 29, 26, 0.15); /* Línea inferior roja muy sutil */
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  background: linear-gradient(180deg, #1f1f1f, var(--bg-footer-dark)) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 4px solid var(--brand-red);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
   padding: 12px 0;
   transition: all 0.3s ease;
 }
 
 /* Marca o Logotipo */
 .navbar .navbar-brand {
-  color: var(--text-dark) !important;
+  color: #ffffff !important;
   font-weight: 700;
   font-size: 1.35rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
-/* Destacar texto del logo en rojo */
-.navbar .navbar-brand span {
-  color: var(--brand-red);
-}
-
 /* Enlaces de la Navbar */
 .navbar .nav-link {
-  color: var(--text-dark) !important;
+  color: var(--text-footer-light) !important;
   font-weight: 500;
   padding: 6px 14px !important;
   border-radius: 6px;
@@ -101,8 +95,8 @@ html {
 /* Hover de los enlaces */
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
-  color: var(--brand-red) !important;
-  background: rgba(225, 29, 26, 0.05);
+  color: #ffffff !important;
+  background: rgba(225, 29, 26, 0.18);
 }
 
 /* Enlace activo (Página actual) */
@@ -149,25 +143,25 @@ html {
   outline: none;
 }
 
-/* Botón de búsqueda (Outline Rojo) */
+/* Botón de navegación */
 .navbar .btn-outline-success {
-  color: var(--brand-red) !important;
+  color: #ffffff !important;
   border-color: var(--brand-red) !important;
-  background: transparent;
+  background: var(--brand-red);
   font-weight: 600;
   border-radius: 8px;
   transition: all 0.25s ease;
 }
 
 .navbar .btn-outline-success:hover {
-  background: var(--brand-red) !important;
-  color: #ffffff !important;
+  background: #ffffff !important;
+  color: var(--brand-red) !important;
   box-shadow: 0 4px 12px rgba(225, 29, 26, 0.2);
 }
 
 /* Menú Hamburguesa Móvil */
 .navbar .navbar-toggler {
-  border-color: rgba(0, 0, 0, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
   padding: 6px 10px;
 }
 
@@ -176,7 +170,61 @@ html {
 }
 
 .navbar .navbar-toggler-icon {
-  filter: contrast(0.1); /* Hace que el icono se adapte al fondo claro */
+  filter: brightness(0) invert(1);
+}
+
+/* ==========================================================================
+   SECCIÓN DE CONTACTOS (Cajas negras)
+   ========================================================================== */
+.contact-card {
+  background: linear-gradient(180deg, #1b1b1b, #0f0f0f);
+  color: var(--text-footer-light);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 24px;
+  height: 100%;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+}
+
+.contact-title {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contact-form-card .form-label,
+.contact-form-card .form-text {
+  color: #f4efde;
+}
+
+.contact-form-card .form-control,
+.contact-form-card textarea.form-control {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+}
+
+.contact-form-card .form-control::placeholder,
+.contact-form-card textarea.form-control::placeholder {
+  color: #c2c9d0;
+}
+
+.contact-form-card .form-control:focus,
+.contact-form-card textarea.form-control:focus {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--brand-red);
+  box-shadow: 0 0 0 0.25rem rgba(225, 29, 26, 0.22);
+  color: #ffffff;
+}
+
+.contact-map-card iframe {
+  width: 100%;
+  min-height: 420px;
+  border: 0;
+  border-radius: 14px;
 }
 
 /* ==========================================================================
